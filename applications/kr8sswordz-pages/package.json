@@ -10,7 +10,9 @@
     "test": "ava --verbose",
     "test:watch": "ava --verbose --watch",
     "documentation": "react-docgen ./src/components/**/*.js ./src/components/*.js  -o react-doc.json --pretty",
-    "lint": "eslint ./src/*.js ./src/**/*.js"
+    "lint": "eslint ./src/*.js ./src/**/*.js",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "babel": {
     "presets": [
@@ -64,7 +66,8 @@
     "socket.io-client": "^1.7.3",
     "thunk": "0.0.1",
     "toastr": "^2.1.2",
-    "trae": "^1.1.1"
+    "trae": "^1.1.1",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "async": "^2.1.4",
@@ -118,5 +121,6 @@
     ],
     "babel": "inherit",
     "failFast": false
-  }
+  },
+  "snyk": true
 }
